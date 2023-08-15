@@ -13,9 +13,14 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>sfg-thymeleaf-course</name>
     <description>sfg-thymeleaf-course</description>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
