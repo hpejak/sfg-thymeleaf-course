@@ -6,19 +6,22 @@
 
     <link rel="stylesheet"
           media="screen"
+          href="../static/css/bootstrap-3.3.4/dist/css/bootstrap.min.css"
           th:href="@{/css/bootstrap-3.3.4/dist/css/bootstrap.min.css}"/>
 
-    <script th:src="@{/js/jquery-2.1.4.min.js}"></script>
+    <script src="../static/js/jquery-2.1.4.min.js"
+            th:src="@{/js/jquery-2.1.4.min.js}"></script>
 
-    <link th:href="@{/css/custom.css}"
+    <link href="../static/css/custom.css"
+          th:href="@{/css/custom.css}"
           rel="stylesheet"
           media="screen"/>
 </head>
 <body>
-<div class="jumbotron">
+<div class="jumbotron" th:replace="fragments/jumbotron :: jumbotron">
     <div class="container">
         <h1>Spring Framework Guru</h1>
-        <p class="lead">Online Courses for Spring Framework</p>
+        <p class="lead" th:text="#{index.courses.tagline}">Tag line</p>
     </div>
 </div>
 
@@ -31,7 +34,8 @@
 
     <div class="row">
         <div class="col-md-6">
-            <img th:src="@{/images/SpringIntroThumb.png}"
+            <img src="../static/images/SpringIntroThumb.png"
+                 th:src="@{/images/SpringIntroThumb.png}"
                  class="center-block"
                  alt="NO IMAGE">
         </div>
@@ -45,10 +49,14 @@
     </div>
 
     <div class="row">
-        <div class="offset-md-6 col-md-4">
-            <button class="btn btn-success">Buy Now</button>
+        <div class="col-md-offset-6 col-md-4">
+            <button class="btn btn-success" th:text="#{product.page.buy.text}">Buy Now</button>
         </div>
     </div>
+</div>
+
+<div class="footer" th:replace="fragments/footer :: footer">
+    <p>footer</p>
 </div>
 
 </body>
