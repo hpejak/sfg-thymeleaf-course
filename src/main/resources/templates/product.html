@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Spring Framework Guru - Course Name</h1>
+            <h1 th:text="${product.courseName}">Spring Framework Guru - Course Name</h1>
         </div>
     </div>
 
@@ -41,8 +41,8 @@
         </div>
         <div class="col-md-6">
             <div>
-                <h2>Course Title</h2>
-                <p> Course description - Add Lips-um text here, This is some dome text. I write here just to write.
+                <h2 th:text="${product.courseSubtitle}">Course Title</h2>
+                <p th:text="${product.courseDescription}"> Course description - Add Lips-um text here, This is some dome text. I write here just to write.
                 There is nothing special here</p>
             </div>
         </div>
